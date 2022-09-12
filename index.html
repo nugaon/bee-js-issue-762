@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://unpkg.com/@ethersphere/bee-js/dist/index.browser.min.js"></script>
+    <title>BeeJS Issue 762</title>
+  </head>
+  <body>
+    <script>
+      bee = new BeeJs.Bee('http://localhost:1633')
+      topic = new Uint8Array(32)
+      signer = '634fb5a872396d9693e5c9f9d7233cfa93f395c093371017ff44aa9ae6564cdd' // test private key
+      feed = bee.makeFeedWriter('sequence', topic, signer)
+
+      function feedUpload() {
+        referenceZero = new Uint8Array(32)
+        feed.upload(document.getElementById('postage-stamp').value, referenceZero).then(r => console.log('successful feed upload result', r)).catch(e => console.error('feed upload failure', e))
+      }
+    </script>
+    <input type="text" id="postage-stamp" placeholder="Postage Stamp ID">
+    <button onclick="feedUpload()">Feed upload</button>
+  </body>
+</html>
