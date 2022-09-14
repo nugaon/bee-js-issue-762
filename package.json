@@ -1,0 +1,22 @@
+{
+  "name": "issue-762",
+  "version": "1.0.0",
+  "description": "Requsted test page for [BeeJS issue 762](https://github.com/ethersphere/bee-js/issues/762)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nugaon/bee-js-issue-762.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nugaon/bee-js-issue-762/issues"
+  },
+  "homepage": "https://github.com/nugaon/bee-js-issue-762#readme",
+  "dependencies": {
+    "@ethersphere/bee-js": "^5.0.0"
+  }
+}
